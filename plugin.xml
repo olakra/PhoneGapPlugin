@@ -2,11 +2,11 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="com.marketo.plugin"
-        version="0.7.8">
+        version="0.7.9">
  <name>MarketoPlugin</name>
  <description>Marketo plugin</description>
  <license>Apache</license>
- <keywords>phonegap, Marketo</keywords>
+ <keywords>phonegap, cordova, Marketo</keywords>
  <preference name="APPLICATION_SECRET_KEY"/>
 
 <js-module src="www/marketo.js" name="MarketoPlugin">
@@ -65,6 +65,9 @@
 
 <!-- ios -->
 <platform name="ios">
+  <hook type="after_plugin_install" src="scripts/ios/after_plugin_install.js" />
+  <hook type="before_plugin_uninstall" src="scripts/ios/before_plugin_uninstall.js" />
+
   <config-file target="config.xml" parent="/*">
     <feature name="MarketoPlugin">
       <param name="ios-package" value="MarketoPlugin"/>
@@ -86,11 +89,8 @@
   <header-file src="src/ios/MarketoPlugin.h"/>
   <source-file src="src/ios/MarketoPlugin.m"/>
 
-
-<source-file src="src/ios/AppDelegate+Marketo.m" />
-<header-file src="src/ios/AppDelegate+Marketo.h" />
-
-
+  <header-file src="src/ios/AppDelegate+Marketo.h" />
+  <source-file src="src/ios/AppDelegate+Marketo.m" />
 
   <!-- system frameworks -->
   <framework src="libsqlite3.dylib" />

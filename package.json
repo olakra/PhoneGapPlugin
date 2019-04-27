@@ -1,6 +1,6 @@
 {
   "name": "MarketoPlugin",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "description": "Marketo plugin",
   "cordova": {
     "id": "com.marketo.plugin",
@@ -11,19 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/olakra/PhoneGapPlugin.git"
+    "url": "git://github.com/olakra/PhoneGapPlugin.git"
   },
   "keywords": [
     "phonegap",
     "Marketo",
+    "cordova",
     "ecosystem:cordova",
     "cordova-android",
     "cordova-ios"
   ],
-  "author": "Rudy Gomez",
+  "author": "Oscar Lakra",
   "license": "Apache",
   "bugs": {
-    "url": "https://github.com/Marketo/PhoneGapPlugin/issues"
+    "url": "https://github.com/olakra/PhoneGapPlugin/issues"
   },
-  "homepage": "https://github.com/Marketo/PhoneGapPlugin#readme"
+  "homepage": "https://github.com/olakra/PhoneGapPlugin#readme"
 }
